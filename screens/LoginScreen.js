@@ -8,7 +8,6 @@ class LoginScreen extends Component {
     password: '',
   };
   componentDidMount() {
-    Instana.setView('LoginScreen');
   }
 
   handleLogin = () => {
@@ -17,30 +16,52 @@ class LoginScreen extends Component {
       alert('Login failed. Please check your credentials.');
       return
     }
+    this.setupInstana(username, password)
+        .then(() => {
+          console.log('Fetch operation completed.');
+        })
+        .catch((error) => {
+          console.error('Fetch operation failed:', error);
+        });
+  };
+
+  generateRandomString(length) {
+    const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    let randomString = '';
+    
+    for (let i = 0; i < length; i++) {
+      const randomIndex = Math.floor(Math.random() * charset.length);
+      randomString += charset[randomIndex];
+    }
+    
+    return randomString;
+  }
+  
+
+  async setupInstana(phoneNum, email) {
     Instana.setup('P7BW_ZNaSoaYfsDVlvmmSg', 'https://eum-green-saas.instana.io/mobile', null);
-    Instana.setUserID('123456');
-    Instana.setUserEmail(username);
-    Instana.setUserName(password);
-    Instana.setView('Main Delegate');
+    Instana.setUserID(this.generateRandomString(10));
+    Instana.setUserEmail(phoneNum);
+    Instana.setUserName(email);
+    Instana.setView('Home View');
     Instana.setIgnoreURLsByRegex(['http://localhost:8081.*']);
     this.props.navigation.navigate('Home');
-  };
+  }
 
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.label}>Username:</Text>
+        <Text style={styles.label}>Email:</Text>
         <TextInput
           style={styles.input}
           onChangeText={(text) => this.setState({ username: text })}
           value={this.state.username}
         />
-        <Text style={styles.label}>Password:</Text>
+        <Text style={styles.label}>Phone Number:</Text>
         <TextInput
           style={styles.input}
           onChangeText={(text) => this.setState({ password: text })}
           value={this.state.password}
-          secureTextEntry={true}
         />
         <Button title="Login" onPress={this.handleLogin} />
       </View>
