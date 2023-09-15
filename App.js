@@ -9,7 +9,7 @@ const Stack = createStackNavigator();
 
 class App extends Component {
   componentDidMount() {
-    // Instana.setup('P7BW_ZNaSoaYfsDVlvmmSg', 'https://eum-green-saas.instana.io/mobile', null);
+    //Instana.setup('P7BW_ZNaSoaYfsDVlvmmSg', 'https://eum-green-saas.instana.io/mobile', null);
     // // Instana.setUserID('123456');
     // // Instana.setUserEmail('My Name is');
     // // Instana.setUserName('+653 37363763');
