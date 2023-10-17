@@ -2,11 +2,11 @@
 ## Requirements
 1. npm
 ios :
-1. cocoapods
-2. XCode
+  1. cocoapods
+  2. XCode
 android:
-1. Maven
-2. Any JDK
+  1. Maven
+  2. Any JDK
 ## How to Run (iOS)
 1. Install NPM 
 https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
