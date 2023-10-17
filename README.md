@@ -1,4 +1,4 @@
-# Instana React Native POC
+# Instana React Native Example
 ## Requirements
 1. npm
 ios :
