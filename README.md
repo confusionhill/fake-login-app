@@ -18,7 +18,7 @@ https://guides.cocoapods.org/using/getting-started.html
 <img width="567" alt="Screenshot 2023-10-17 at 09 39 10" src="https://github.com/confusionhill/fake-login-app/assets/71744284/7bf30989-c778-4ade-aac6-9d11a51b2b37">
   
 4. Go to the `ios` folder and run `pod install`
-
+\n\n
 <img width="568" alt="Screenshot 2023-10-17 at 09 39 23" src="https://github.com/confusionhill/fake-login-app/assets/71744284/1212b20e-63aa-44b5-bd13-1853d06e029d">
 
 5. Go to the `ios` folder and open `exampleapp2.xcworkspace` using Xcode
