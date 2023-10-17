@@ -1,12 +1,10 @@
 # Instana React Native Example
 ## Requirements
 1. npm
-ios :
-  a. cocoapods
-  b. XCode
-android:
-  a. Maven
-  b. Any JDK
+2. Maven
+3. Cocoapods
+4. Any JDK (Java Development Kit)
+5. Xcode
 ## How to Run (iOS)
 1. Install NPM 
 https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
