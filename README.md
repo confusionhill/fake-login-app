@@ -1,1 +1,3 @@
-# fake-login-app
+# Instana React Native POC
+## Requirements
+## How to Run
