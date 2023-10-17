@@ -14,5 +14,5 @@ https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
 https://guides.cocoapods.org/using/getting-started.html
 3. Go to the root folder and run in the CLI `npm install`
 4. Go to the `ios` folder and run `pod install`
-5. Go to the `ios` folder and open exampleapp2.xcworkspace using Xcode
+5. Go to the `ios` folder and open `exampleapp2.xcworkspace` using Xcode
 6. Click Run
